@@ -5,6 +5,10 @@
 
 #
 
+View now at **https://baby-steps-angular.vercel.app**
+
+#
+
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
 - Testing the so called *AnGuLaR*
 
