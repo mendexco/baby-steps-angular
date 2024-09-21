@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <svg-icon-angular />
+      <h1>Welcome to <br />baby-steps-angular</h1>
+      <p>
+        Is your name <strong>{{ name }}</strong>
+        <span *ngIf="!!name">?</span>
+      </p>
+      <app-name-input
+        (onNameInputKeyUp)="handleChangeTitle($event)"
+        [name]="name"
+      />
+      <br />
+      <button (click)="this.name = ''">
+        Clear text field with this massive labeled button
+      </button>
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+    <div class="right-side">
+      <div class="pill-group">
+        @for (item of pills; track item.title) {
+        <app-pill [title]="item.title" [link]="item.link" />
+        }
+      </div>
+    </div>
+  </div>
+</main>
