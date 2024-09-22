@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import PillComponent from '@components/pill';
 import { SOCIAL_DATA } from '@constants';
 import GroupComponent from '@features/group';
+import PipesComponent from '@features/pipes';
 import AngularSvgIconComponent from '@icons/angular';
 import NameInputComponent from './title-input';
 
@@ -15,6 +16,7 @@ import NameInputComponent from './title-input';
     NameInputComponent,
     NgIf,
     GroupComponent,
+    PipesComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',

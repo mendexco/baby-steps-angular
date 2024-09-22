@@ -1,0 +1,46 @@
+<div
+  [ngStyle]="{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+    marginBottom: '80px'
+  }"
+>
+  <div
+    [ngStyle]="{
+      display: 'flex',
+      flexDirection: 'column',
+      background: 'gainsboro',
+    }"
+  >
+    <p>date: {{ date }}</p>
+    <p>date: {{ date | date }}</p>
+    <p>date: {{ date | date : "dd/MM/yy" }}</p>
+  </div>
+  <div
+    [ngStyle]="{
+    display: 'flex',
+    flexDirection: 'column',
+    background: 'gainsboro',
+  }"
+  >
+    <p>text: {{ text }}</p>
+    <p>text: {{ text | lowercase }}</p>
+    <p>text: {{ text | uppercase }}</p>
+    <p>text: {{ text | titlecase }}</p>
+  </div>
+  <div
+    [ngStyle]="{
+    display: 'flex',
+    flexDirection: 'column',
+    background: 'gainsboro',
+  }"
+  >
+    <p>number: {{ number }}</p>
+    <p>number: {{ number | currency }}</p>
+    <p>number: {{ number | currency : "EUR" }}</p>
+    <p>number: {{ number | currency : "BRL" }}</p>
+    <p>number: {{ number | percent }}</p>
+    <p>number: {{ number | percent: '1.1-4' }}</p>
+  </div>
+</div>
