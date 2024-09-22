@@ -1,0 +1,26 @@
+<div class="group-root">
+  <div>
+    <input type="text" #newItemName />
+    <button (click)="generate(newItemName.value)">generate</button>
+  </div>
+  <div class="group-wrapper">
+    @for( item of data; track trackItem; let index = $index) {
+    <div
+      class="item"
+      [class.is-first]="$first"
+      [class.is-last]="$last && $count > 1"
+      [class.is-even]="$even"
+      [class.is-odd]="$odd"
+    >
+      <p style="margin: 0">
+        {{ index + 1 }}/{{ $count }}{{ item.name && " - " + item.name }}
+      </p>
+      <img [src]="item.src" [alt]="item.id" />
+      <button (click)="deleteItem(item)" class="delete-button">BLOW</button>
+      <app-group-sub />
+    </div>
+    } @empty {
+    <p>No item added</p>
+    }
+  </div>
+</div>

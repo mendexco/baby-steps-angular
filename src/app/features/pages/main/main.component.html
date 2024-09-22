@@ -1,4 +1,4 @@
-<main class="main">
+<main>
   <div class="content">
     <div class="left-side">
       <svg-icon-angular />
@@ -16,13 +16,19 @@
         Clear text field with this massive labeled button
       </button>
     </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
+    <hr class="divider" role="separator" aria-label="Divider" />
     <div class="right-side">
       <div class="pill-group">
         @for (item of pills; track item.title) {
-        <app-pill [title]="item.title" [link]="item.link" />
+        <app-pill
+          [title]="item.title"
+          [link]="item.link"
+          [className]="item.className"
+        />
         }
       </div>
     </div>
   </div>
+  <hr class="divider-horizontal" role="separator" aria-label="Divider" />
+  <app-group />
 </main>

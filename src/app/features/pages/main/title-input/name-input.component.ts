@@ -4,7 +4,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-name-input',
   standalone: true,
   templateUrl: './name-input.component.html',
-  styleUrl: './name-input.component.scss',
 })
 export class NameInputComponent {
   @Input() name?: string = '';
